@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            background: #006b74;
+        }
+
+        .features .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .features .card .card-img img {
+            width: 100px;
+            margin-bottom: 15px;
+        }
+
+        .features .card .card-body h2 {
+            margin: 10px 0 5px;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #d6f1f3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="features">
+        <div class="card">
+            <div class="card-img">
+                <img src="/logo/quality.png" alt="Quality Checked">
+            </div>
+            <div class="card-body">
+                <h2>100% Quality Checked Products</h2>
+                <p>We ensure every product meets high standards before shipping.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <img src="/logo/return.png" alt="Easy Returns">
+            </div>
+            <div class="card-body">
+                <h2>7-Day Easy Returns</h2>
+                <p>Shop confidently with hassle-free exchanges &amp; returns.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <img src="/logo/free-delivery.png" alt="Free Shipping">
+            </div>
+            <div class="card-body">
+                <h2>Free Shipping Over ₹999</h2>
+                <p>Save big on delivery charges.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <img src="/logo/cash-on-delivery.png" alt="Cash on Delivery">
+            </div>
+            <div class="card-body">
+                <h2>Cash on Delivery Available</h2>
+                <p>Pay only when your order arrives at your doorstep.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+

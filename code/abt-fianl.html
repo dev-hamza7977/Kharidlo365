@@ -1,0 +1,523 @@
+<style>
+    /* Hero Section */
+    .hero-section {
+        padding: 40px 0;
+        background-color: #006b74;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .hero-badge {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 9999px;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+
+    .hero-title {
+        font-weight: 800;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+        color: #ffffff;
+    }
+
+    .hero-text {
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 3rem;
+        max-width: 48rem;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.8;
+    }
+
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .hero-btn-primary {
+        display: inline-flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        text-decoration: none;
+        background-color: #ffffff !important;
+        color: #006b74 !important;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        text-decoration: none;
+        border: 2px solid #ffffff;
+        background-color: transparent !important;
+        color: #ffffff !important;
+        transition: all 0.3s;
+    }
+
+    /* About Us Section */
+    .about-section {
+        padding: 40px 0;
+        background-color: #f9fafb;
+        text-align: center;
+    }
+
+    .about-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .about-title {
+        color: #1f2937;
+    }
+
+    .about-text {
+        color: #6b7280;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Vision & Mission Section */
+    .vision-mission-section {
+        padding: 40px 0;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+
+    .vision-mission-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .vision-mission-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .vision-mission-header h2 {
+        color: #00a693;
+        letter-spacing: -0.02em;
+    }
+
+    .vision-mission-header p {
+        color: #64748b;
+        margin: 0;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .vision-mission-grid {
+        display: flex;
+        /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
+        gap: 40px;
+        align-items: stretch;
+    }
+
+    /* Vision/Mission Cards */
+    .vision-card {
+        background: linear-gradient(135deg, #00A693 0%, #00B8A3 100%);
+        padding: 48px;
+        border-radius: 24px;
+        box-shadow: 0 20px 40px rgba(0, 166, 147, 0.15);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .vision-card::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 120px;
+        height: 120px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        opacity: 0.6;
+    }
+
+    .vision-card-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .vision-card-content-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    .vision-card-number {
+        background: linear-gradient(135deg, #00A693, #FF9800);
+        color: white;
+        padding: 10px;
+        border-radius: 100%;
+        font-weight: 600;
+        margin-right: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    .vision-card-title {
+        font-weight: bold;
+        color: white;
+        margin: 0;
+        letter-spacing: -0.01em;
+    }
+
+    .vision-card-text {
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.95);
+        margin: 0 0 32px 0;
+    }
+
+    .vision-card-divider {
+        height: 2px;
+        width: 60px;
+        background: linear-gradient(135deg, #00A693, #FF9800);
+        border-radius: 2px;
+    }
+
+    .mission-card {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        padding: 48px;
+        border-radius: 24px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(0, 166, 147, 0.1);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .mission-card::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 120px;
+        height: 120px;
+        background: linear-gradient(135deg, #00A693, #FF9800);
+        opacity: 0.05;
+        border-radius: 50%;
+    }
+
+    .mission-card-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .mission-card-content-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    .mission-card-number {
+        background: linear-gradient(135deg, #00A693, #FF9800);
+        color: white;
+        padding: 10px;
+        border-radius: 100%;
+        font-weight: 600;
+        margin-right: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    .mission-card-title {
+        font-weight: bold;
+        color: #1e293b;
+        margin: 0;
+        letter-spacing: -0.01em;
+    }
+
+    .mission-card-text {
+        line-height: 1.7;
+        color: #475569;
+        margin: 0 0 32px 0;
+    }
+
+    .mission-card-divider {
+        height: 2px;
+        width: 60px;
+        background: linear-gradient(135deg, #00A693, #FF9800);
+        border-radius: 2px;
+    }
+
+    /* What Drives Us */
+    .drives-section {
+        padding: 40px 0;
+        background-color: #f9fafb;
+        text-align: center;
+    }
+
+    .drives-container {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    .drives-title {
+        color: #1f2937;
+    }
+
+    .drives-text {
+        color: #6b7280;
+        max-width: 50rem;
+        margin: 0 auto 4rem;
+    }
+
+    .drives-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+    }
+
+    .drive-card {
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        border: 1px solid #e5e7eb;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: default;
+    }
+
+    .drive-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        background-color: #74ced570;
+    }
+
+    .drive-icon {
+        width: 4rem;
+        height: 4rem;
+        background-color: rgba(0, 107, 116, 0.1);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 1rem;
+        border: 1px dashed;
+    }
+
+    .drive-title {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #006b74;
+    }
+
+    .drive-text {
+        color: #6b7280;
+        line-height: 1.8;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: 40px 0;
+        background-color: #006b74;
+        text-align: center;
+        color: #ffffff !important;
+    }
+
+    .cta-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    /* Responsive */
+    @media (min-width: 768px) {
+        /* .vision-mission-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 48px;
+            } */
+
+        .cta-buttons {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .vision-mission-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        section {
+            padding: 40px 20px;
+        }
+
+        .vision-mission-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px
+        }
+    }
+</style>
+<main><!-- Hero Section -->
+    <section class="hero-section"><span class="hero-badge">Our Story</span>
+        <h1 class="hero-title">Quality meets innovation in every product</h1>
+        <p class="hero-text">Transform your everyday experiences with Kharidlo365's carefully curated collection of
+            premium products designed for modern living. We focus on innovation, quality, and affordability to ensure
+            every purchase brings satisfaction and delight.</p>
+        <div class="hero-buttons">
+            <a class="hero-btn-primary" href="#products">Explore Our Products <span
+                    style="margin-left: 0.5rem;">→</span></a> <a class="hero-btn-secondary" href="#vision-mission">Learn
+                Our Process</a>
+        </div>
+    </section>
+    <!-- About Us -->
+    <section class="about-section" id="about-us">
+        <div class="about-container">
+            <h2 class="about-title">About Kharidlo365</h2>
+            <p class="about-text">Kharidlo365 was founded with a simple mission: to bring premium, innovative, and
+                affordable products to your doorstep. Our journey began with a passion for quality and design, ensuring
+                that every product we offer meets the highest standards of functionality and aesthetics.</p>
+            <p class="about-text">We carefully curate our collections, working directly with manufacturers to guarantee
+                excellence. From everyday essentials to unique finds, Kharidlo365 is dedicated to improving your
+                lifestyle with products you can trust.</p>
+            <p class="about-text">Our commitment to customer satisfaction, sustainability, and innovation drives
+                everything we do. We believe in providing value while maintaining the highest ethical standards in
+                sourcing and production.</p>
+        </div>
+    </section>
+    <!-- Vision & Mission -->
+    <section class="vision-mission-section">
+        <div class="vision-mission-container">
+            <div class="vision-mission-header">
+                <h2>Our Foundation</h2>
+                <p>Building the future of everyday essentials with purpose and passion</p>
+            </div>
+            <div class="vision-mission-grid">
+                <div class="vision-card">
+                    <div class="vision-card-content">
+                        <div class="vision-card-content-header">
+                            <span class="vision-card-number"><svg stroke="#ffffff" fill="#ffffff"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+                                    data-name="Layer 1" id="Layer_1" viewbox="0 0 24 24" height="30px" width="30px">
+                                    <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                                    <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier">
+                                    </g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: none;
+                                                }
+
+                                                .cls-2 {
+                                                    clip-path: url(#clip-path);
+                                                }
+                                            </style>
+                                            <clippath id="clip-path">
+                                                <rect height="24" width="24" class="cls-1"></rect>
+                                            </clippath>
+                                        </defs>
+                                        <title>oective</title>
+                                        <g class="cls-2">
+                                            <path
+                                                d="M12,15.45A3.45,3.45,0,1,1,15.45,12,3.46,3.46,0,0,1,12,15.45Zm0-4.9A1.45,1.45,0,1,0,13.45,12,1.45,1.45,0,0,0,12,10.55Z">
+                                            </path>
+                                            <path
+                                                d="M12,18.73A6.73,6.73,0,1,1,18.73,12,6.74,6.74,0,0,1,12,18.73ZM12,7.27A4.73,4.73,0,1,0,16.73,12,4.73,4.73,0,0,0,12,7.27Z">
+                                            </path>
+                                            <path
+                                                d="M12,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22ZM12,4a8,8,0,1,0,8,8A8,8,0,0,0,12,4Z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg></span>
+                            <h3 class="vision-card-title">Our Vision</h3>
+                        </div>
+                        <p class="vision-card-text">To be the go-to destination for premium, innovative products that
+                            improve everyday life while maintaining affordability and sustainable practices. We envision
+                            a world where quality and innovation are accessible to all.</p>
+                        <div class="vision-card-divider"><br></div>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-card-content">
+                        <div class="mission-card-content-header">
+                            <span class="mission-card-number"><svg width="30px" height="30px" viewbox="0 0 24 24"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                                            stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path d="M7.75 12L10.58 14.83L16.25 9.17004" stroke="#ffffff" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg></span>
+                            <h3 class="mission-card-title">Our Mission</h3>
+                        </div>
+                        <p class="mission-card-text">To source, curate, and deliver premium quality products that
+                            enhance the daily lives of our customers. We focus on functionality, design excellence, and
+                            sustainable practices, ensuring every item meets our high standards.</p>
+                        <div class="mission-card-divider"><br></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- What Drives Us -->
+    <section class="drives-section">
+        <div class="drives-container">
+            <h2 class="drives-title">What Drives Us</h2>
+            <p class="drives-text">Our core values guide every decision we make, from product selection to customer
+                service.</p>
+            <div class="drives-grid">
+                <div class="drive-card">
+                    <div class="drive-icon">🏆</div>
+                    <h3 class="drive-title">Excellence</h3>
+                    <p class="drive-text">We never compromise on quality. Every product meets our rigorous standards for
+                        durability, functionality, and design.</p>
+                </div>
+                <div class="drive-card">
+                    <div class="drive-icon">❤️</div>
+                    <h3 class="drive-title">Customer Care</h3>
+                    <p class="drive-text">Your satisfaction is our priority. We provide exceptional support and stand
+                        behind every purchase with confidence.</p>
+                </div>
+                <div class="drive-card">
+                    <div class="drive-icon">🌍</div>
+                    <h3 class="drive-title">Sustainability</h3>
+                    <p class="drive-text">We're committed to responsible sourcing and eco-friendly practices that
+                        protect our planet for future generations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Experience Quality?</h2>
+            <p>Join thousands of satisfied customers who trust Kharidlo365 for their premium product needs.</p>
+            <div class="cta-buttons">
+                <a class="hero-btn-primary" href="#shop">Shop Our Collection <span
+                        style="margin-left: 0.5rem;">→</span></a> <a class="hero-btn-secondary" href="#contact">Contact
+                    Us</a>
+            </div>
+        </div>
+    </section>
+</main>
